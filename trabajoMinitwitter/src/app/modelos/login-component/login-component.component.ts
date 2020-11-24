@@ -9,6 +9,7 @@ import { AuthService } from '../../servicios/auth.service';
   styleUrls: ['./login-component.component.scss']
 })
 export class LoginComponent implements OnInit {
+  
   usuario: LoginDto;
 
   // Inyección de dependencias
