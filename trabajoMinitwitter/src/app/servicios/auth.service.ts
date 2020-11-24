@@ -5,7 +5,7 @@ import { LoginResponse } from '../interfaces/respuestaLogin';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const LOGIN_URL = 'https://www.minitwitter.com:3001/api/auth/login';
+const LOGIN_URL = 'https://www.minitwitter.com:3001/apiv1/auth/login';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -20,11 +20,16 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
+
   login(loginDto: LoginDto): Observable<LoginResponse> {
+    alert('Entra al método login del servicio');
     return this.http.post<LoginResponse>(
       LOGIN_URL,
       loginDto,
       httpOptions
     );
   }
+
+  
+
 }
