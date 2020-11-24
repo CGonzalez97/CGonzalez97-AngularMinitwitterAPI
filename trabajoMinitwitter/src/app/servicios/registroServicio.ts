@@ -1,6 +1,6 @@
   
 import { Injectable } from '@angular/core';
-import { LoginDto } from '../modelos/login.dto';
+import { RegistroDto } from '../modelos/registro.dto';
 import { RespuestaRegistro } from '../interfaces/respuestaRegistro';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -21,11 +21,11 @@ export class RegistroServicio {
   constructor(private http: HttpClient) { }
 
 
-  login(loginDto: LoginDto): Observable<RespuestaRegistro> {
+  registrar(registroDto: RegistroDto): Observable<RespuestaRegistro> {
     alert('Entra al método login del servicio');
     return this.http.post<RespuestaRegistro>(
       LOGIN_URL,
-      loginDto,
+      registroDto,
       httpOptions
     );
   }
