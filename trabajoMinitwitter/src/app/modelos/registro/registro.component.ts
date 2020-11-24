@@ -19,7 +19,10 @@ export class RegistroComponent implements OnInit {
   }
 
   registrarUsuario(){
-    this.registroServicio.registrar(this.usuario).subscribe(respuesta => alert('Resultada: '+respuesta))
+    this.registroServicio.registrar(this.usuario).subscribe(respuesta => {
+      //alert('Resultad:\nUsuario:'+respuesta.username+'\nRol:'+respuesta.role);
+      alert('alsdflasfal');
+    });
   }
 
 }

@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
   doLogin() {
     // Llamar a un servicio que mande la petición de login
     // a la API.
-    alert('Entra al método doLogin()');
     this.authService.login(this.usuario).subscribe(respuesta => {
         alert('API TOKEN ' + respuesta.token);
     });

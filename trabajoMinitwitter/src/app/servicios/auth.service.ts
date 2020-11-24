@@ -22,7 +22,6 @@ export class AuthService {
 
 
   login(loginDto: LoginDto): Observable<LoginResponse> {
-    alert('Entra al método login del servicio');
     return this.http.post<LoginResponse>(
       LOGIN_URL,
       loginDto,

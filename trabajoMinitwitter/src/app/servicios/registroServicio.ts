@@ -22,7 +22,6 @@ export class RegistroServicio {
 
 
   registrar(registroDto: RegistroDto): Observable<RespuestaRegistro> {
-    alert('Entra al método login del servicio');
     return this.http.post<RespuestaRegistro>(
       LOGIN_URL,
       registroDto,
