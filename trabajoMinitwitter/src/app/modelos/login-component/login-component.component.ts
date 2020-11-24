@@ -1,15 +1,30 @@
+
 import { Component, OnInit } from '@angular/core';
+import { LoginDto } from '../login.dto';
+import { AuthService } from '../../servicios/auth.service';
 
 @Component({
-  selector: 'app-login-component',
+  selector: 'app-login',
   templateUrl: './login-component.component.html',
   styleUrls: ['./login-component.component.scss']
 })
-export class LoginComponentComponent implements OnInit {
+export class LoginComponent implements OnInit {
+  usuario: LoginDto;
 
-  constructor() { }
+  // Inyección de dependencias
+  constructor(private authService: AuthService) { 
+    this.usuario = new LoginDto('', '');
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  doLogin() {
+    // Llamar a un servicio que mande la petición de login
+    // a la API.
+    this.authService.login(this.usuario).subscribe(respuesta => {
+        alert('API TOKEN ' + respuesta.token);
+    });
   }
 
 }
