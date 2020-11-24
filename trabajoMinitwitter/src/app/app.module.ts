@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './modelos/login-component/login-component.component';
 import { RouterModule, Routes } from '@angular/router';
-import { RegistroComponent } from './registro/registro.component';//Importamos Routes
+import { RegistroComponent } from './modelos/registro/registro.component';//Importamos Routes
 
 
 //Rutas para la navegacion

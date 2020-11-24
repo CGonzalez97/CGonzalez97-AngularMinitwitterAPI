@@ -1,6 +1,6 @@
 <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" class="container">
 
-    <input type="text" [(ngModel)]="usuario.username" #em="ngModel" required [username]="true" />
+    <input type="text" [(ngModel)]="usuario.username" #em="ngModel" required  /><!--[username]="true"-->
 
     <input type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true" />
 
@@ -16,9 +16,9 @@
         <p *ngIf="pwd.errors?.pattern">La contraeña debe ser un número entre 4 y 6 dígitos</p>
     </div>
 
-    <input type="code" [(ngModel)]="usuario.code" #em="ngModel" required [code]="true" />
+    <input type="code" [(ngModel)]="usuario.code" #em="ngModel" required  /><!--[code]="true"-->
 
-    <input type="button" (click)="doLogin()" value="Login" />
+    <input type="button" (click)="registrarUsuario()" value="Login" />
 
 
 </div>

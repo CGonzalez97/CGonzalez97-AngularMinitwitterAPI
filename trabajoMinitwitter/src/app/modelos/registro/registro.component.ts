@@ -11,7 +11,9 @@ export class RegistroComponent implements OnInit {
 
   usuario:RegistroDto;
 
-  constructor(private registroServicio:RegistroServicio) { }
+  constructor(private registroServicio:RegistroServicio) { 
+    this.usuario = new RegistroDto('', '','','');
+  }
 
   ngOnInit(): void {
   }

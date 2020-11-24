@@ -2,7 +2,7 @@ export class RegistroDto{
   username:string;
   email:string;
   password:string;
-  code:string
+  code:string;
   constructor(username:string, email:string, password:string, code:string){
     this.username = username;
     this.email = email;
