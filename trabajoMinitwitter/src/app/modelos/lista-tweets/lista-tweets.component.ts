@@ -14,6 +14,7 @@ export class ListaTweetsComponent implements OnInit {
   constructor(private listaTweetsService: ListarTweetsService) { }
 
   ngOnInit(): void {
+    this.cargarTweets();
   }
 
   cargarTweets(){

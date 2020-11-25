@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginDto } from '../login.dto';
 import { AuthService } from '../../servicios/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   usuario: LoginDto;
 
   // Inyección de dependencias
-  constructor(private authService: AuthService) { 
+  constructor(private authService: AuthService, public router :Router) { 
     this.usuario = new LoginDto('', '');
   }
 
