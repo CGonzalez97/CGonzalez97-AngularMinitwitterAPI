@@ -13,7 +13,9 @@
         <p *ngIf="pwd.errors?.required"> El campo contraseña es requerido.</p>
         <p *ngIf="pwd.errors?.pattern">La contraeña debe ser un número entre 4 y 6 dígitos</p>
   </div>
-    <input type="button" (click)="doLogin()" value="Login" />
+    <input type="button" (click)="doLogin()" value="Login" routerLink="/tweets"/>
 
 
   </div>
+
+  <a routerLink="/registro"><h3>Registro</h3></a>

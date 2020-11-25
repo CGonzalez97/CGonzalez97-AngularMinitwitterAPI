@@ -16,7 +16,9 @@ import { ListaTweetsComponent } from './modelos/lista-tweets/lista-tweets.compon
 
 //Rutas para la navegacion
 const appRoutes: Routes = [
-  {path: 'auth/login', component: LoginComponent}
+  {path: /*'auth/login'*/'', component: LoginComponent},
+  {path: 'registro', component: RegistroComponent},
+  {path: 'tweets', component:ListaTweetsComponent}
 ];
 
 
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     FlexLayoutModule,
     FormsModule,
     HttpClientModule,

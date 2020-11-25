@@ -1,1 +1,8 @@
 <p>lista-tweets works!</p>
+<div>
+    <div class="tweet" *ngFor="let tweet of listadoTweets">
+        <div>{{tweet.id}}</div>
+        <div>{{tweet.user.id}}</div>
+        <div>{{tweet.user.descripcion}}</div>
+    </div>
+</div>
