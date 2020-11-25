@@ -20,7 +20,8 @@ export class RegistroComponent implements OnInit {
 
   registrarUsuario(){
     this.registroServicio.registrar(this.usuario).subscribe(respuesta => {
-      //alert('Resultad:\nUsuario:'+respuesta.username+'\nRol:'+respuesta.role);
+      alert('Resultad:\nUsuario:'+respuesta.username+'\nRol:'+respuesta.role+'\nToken:'+respuesta.token);
+      localStorage.setItem('token', respuesta.token);
       alert('alsdflasfal');
     });
   }
