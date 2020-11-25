@@ -3,11 +3,12 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { RespuestaTweets } from '../interfaces/respuestaAllTweets';
 import { Observable } from 'rxjs';
 
+let token = localStorage.getItem('token');
 const authURL = 'https://www.minitwitter.com:3001/apiv1/tweets/all';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    'Authorization': 'Bearer ' + localStorage.getItem('token')//token
+    'Authorization': 'Bearer ' + token
   })
 };
 
