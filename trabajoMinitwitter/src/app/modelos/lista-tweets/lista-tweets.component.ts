@@ -15,14 +15,19 @@ export class ListaTweetsComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarTweets();
-    alert('ngOnInit');
   }
 
   cargarTweets(){
     this.listaTweetsService.getTweets().subscribe(resp => {
       this.listadoTweets = resp.lista;
-      alert('cargarTweet');
-      alert(resp);
+      alert(resp[0]);
+      let lista:[];
+      /*for (let atrib in resp[0]){
+        alert(atrib);
+      }*/
+      for (let atrib of resp[0]){
+        alert(atrib);
+      }
     });
   }
 
