@@ -7,5 +7,7 @@ parapapaa
         <div>{{tweet.mensaje}}</div>
         <div>{{tweet.user.id}}</div>
         <div>{{tweet.user.descripcion}}</div>
+        <!--<button (click)="darLike({{tweet.id}})">Likete</button>-->
+        <button ng-click="darLike(tweet.id)">Likete</button>
     </div>
 </div>
