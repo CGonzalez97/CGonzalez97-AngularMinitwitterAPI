@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListarTweetsService } from '../../servicios/listar-tweets.service';
 import {Tweet} from '../../interfaces/tweet';
+import { RespuestaTweets } from 'src/app/interfaces/respuestaAllTweets';
 
 @Component({
   selector: 'app-lista-tweets',
@@ -19,15 +20,7 @@ export class ListaTweetsComponent implements OnInit {
 
   cargarTweets(){
     this.listaTweetsService.getTweets().subscribe(resp => {
-      this.listadoTweets = resp.lista;
-      alert(resp[0]);
-      let lista:[];
-      /*for (let atrib in resp[0]){
-        alert(atrib);
-      }*/
-      for (let atrib of resp[0]){
-        alert(atrib);
-      }
+      this.listadoTweets = resp;
     });
   }
 
