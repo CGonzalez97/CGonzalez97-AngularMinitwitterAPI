@@ -1,30 +1,36 @@
 <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" class="container">
 
-    <h5>Usuario</h5>
-    <input type="text" [(ngModel)]="usuario.username" #em="ngModel" required  /><!--[username]="true"-->
+    <!--<h5>Usuario</h5>
+    <input type="text" [(ngModel)]="usuario.username" #em="ngModel" required  />-->
+    <h5>Usuario</h5><input matInput type="text" [(ngModel)]="usuario.username" #em="ngModel" required>
 
-    <h5>Email</h5>
-    <input type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true" />
+    <!--<h5>Email</h5>
+    <input type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true" />-->
+    <h5>Email</h5><input matInput type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true">
 
     <div [hidden]="em.valid || em.pristine" class="alert alert-danger">
       <p *ngIf="em.errors?.required">El campo email es requerido.</p>
       <p *ngIf="em.errors?.email">El campo email debe estar bien formado.</p>
     </div>
 
-    <h5>Contraseña</h5>
-    <input type="password" [(ngModel)]="usuario.password" #pwd="ngModel" pattern="[0-9]{4,6}" required />
+    <!--<h5>Contraseña</h5>
+    <input type="password" [(ngModel)]="usuario.password" #pwd="ngModel" pattern="[0-9]{4,6}" required />-->
+    <h5>Contraseña</h5><input matInput type="password" [(ngModel)]="usuario.password" #pwd="ngModel" pattern="[0-9]{4,6}" required>
 
     <div [hidden]="pwd.valid || pwd.pristine" class="alert alert-danger">
         <p *ngIf="pwd.errors?.required"> El campo contraseña es requerido.</p>
         <p *ngIf="pwd.errors?.pattern">La contraeña debe ser un número entre 4 y 6 dígitos</p>
     </div>
 
-    <h5>Código</h5>
-    <input type="code" [(ngModel)]="usuario.code" #em="ngModel" required  /><!--[code]="true"-->
+    <!--<h5>Código</h5>
+    <input type="code" [(ngModel)]="usuario.code" #em="ngModel" required  />-->
+    <h5>Código</h5><input matInput type="code" [(ngModel)]="usuario.code" #em="ngModel" required>
 
-    <input type="button" (click)="registrarUsuario()" value="Login" />
+    <!--<input type="button" (click)="registrarUsuario()" value="Registrarse" />-->
+    <!--<mat-flat-button  >Registrarse</mat-flat-button>-->
+    <mat-flat-button id="accion"  routerLink="/" type="button" (click)="registrarUsuario()" value="Registrarse"><h3>Registrarse</h3></mat-flat-button>
+    <!--<a routerLink="/"><h3>Login</h3></a>-->
 
+    <mat-flat-button id="cambioForm" routerLink="/" color="primary"><h3>Ir a login</h3></mat-flat-button>
 
 </div>
-
-<a routerLink="/"><h3>Login</h3></a>

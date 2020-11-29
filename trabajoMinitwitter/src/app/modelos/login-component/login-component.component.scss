@@ -1,3 +1,17 @@
-.container {
-    padding: 30px;
+mat-flat-button{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-radius: 5px;
+
+    h3{
+        margin: 8px 16px;
+    }
+}
+#cambioForm{
+    background-color: #999;
+    color: white;
+}
+#accion{
+    background-color: rgb(205, 246, 22);
 }
