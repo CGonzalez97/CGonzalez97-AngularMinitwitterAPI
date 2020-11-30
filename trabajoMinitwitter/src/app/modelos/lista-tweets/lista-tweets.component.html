@@ -1,13 +1,15 @@
-<p>lista-tweets works!</p>
-parapapaa
-<div>
+<!--<div>
     Pinta el div grande
     <div class="tweet" *ngFor="let tweet of listadoTweets">
-        <div>{{tweet.id}}</div>
-        <div>{{tweet.mensaje}}</div>
-        <div>{{tweet.user.id}}</div>
-        <div>{{tweet.user.descripcion}}</div>
-        <!--<button (click)="darLike({{tweet.id}})">Likete</button>-->
-        <button ng-click="darLike(tweet.id)">Likete</button>
+        <div id="nombrePosteador">Escrito por: {{tweet.user.username}}</div>
+        <h3>{{tweet.mensaje}}</h3>
+        <div>Descripción usuario: {{tweet.user.descripcion}}</div>
+        <mat-flat-button id="botonDarLike" ng-click="darLike(tweet.id)" ><h3>Dar likete</h3></mat-flat-button>
     </div>
-</div>
+</div>-->
+
+<mat-card *ngFor="let tweet of listadoTweets">
+    <mat-card-title>Escrito por: {{tweet.user.username}}</mat-card-title>
+    <mat-card-content>{{tweet.mensaje}}</mat-card-content>
+    <!--<mat-card-actions>--><mat-flat-button ng-click="darLike(tweet.id)" ><h3>Dar likete</h3></mat-flat-button><!--</mat-card-actions>-->
+</mat-card>
